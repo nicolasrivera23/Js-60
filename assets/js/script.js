@@ -155,3 +155,90 @@ function cond() {
     alert('La condición no se cumplió');
   }
 }
+
+function cond2() {
+  if(10 > 11) {
+    console.log("entro en el if");
+  } else if(3 < 2) {
+    console.log("entro en el else if");
+  } else {
+    console.log("entro en el bloque else");
+  }
+}
+
+function switc() {
+  let condicion = 'blue';
+
+  switch(condicion) {
+    case 'red':
+      console.log("El saco es rojo");
+      break;
+    case 'blue':
+      console.log("El saco es azul");
+      break;
+    case 'yellow':
+      console.log("El saco es amarillo");
+      break;
+    default:
+      console.log("No tengo ese color");
+      break;
+  }
+}
+
+function tern() {
+  let numero = 13;
+
+  let resultado = numero >= 13 ? 'Es mayor que 13' : 'Es menor que 13';
+
+  console.log(resultado);
+}
+
+function fo() {
+
+  for(let i = 0; i < 15; i++) {
+    console.log("El valor de i es : " + i);
+  }
+
+}
+
+function wh() {
+  let condition = Number(prompt('1. Ver Saldo\n 0. Salir'));
+
+  while(condition != 0) {
+    switch(condition){
+      case 1:
+        alert('Su saldo es de 0.00$');
+        condition = 0;
+        break;
+      default: 
+        alert('La opción es incorrecta. Vuelva a elegir');
+        break;
+    }
+    condition = Number(prompt('1. Ver Saldo\n 0. Salir'));
+  }
+}
+
+function dwh() {
+
+  do {
+    var condition = Number(prompt('1. Ver Saldo\n 0. Salir'));
+
+    while(condition != 0) {
+      switch(condition) {
+        case 1:
+          alert('Su saldo es de 0.00$');
+          condition = 0;
+          break;
+        default: 
+          alert('La opción es incorrecta. Vuelva a elegir');
+          break;
+      }
+      condition = Number(prompt('1. Ver Saldo\n 0. Salir'));
+    }
+  } while(condition != 0);
+
+
+
+  let age = 35, nombre = "Sarasa", apellido = "sarasa2"; 
+
+}
