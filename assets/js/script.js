@@ -242,3 +242,96 @@ function dwh() {
   let age = 35, nombre = "Sarasa", apellido = "sarasa2"; 
 
 }
+
+function fnc() {
+  let resultado = 33 + 18;
+  //muestro el resultado por consola
+  console.log(resultado);
+  // el return me devuelve un valor al llamar o invocar a esta función
+  return resultado;
+}
+
+//declaro una variable suma y le asigno el valor que retorna la función fnc()
+let suma = fnc();
+console.log("Let suma = " + suma);
+
+
+function fnc2(a, b) {
+  let resultado = a + b;
+  return resultado;
+}
+
+let suma2 = fnc2(11 , 12);
+console.log("Let suma2 = " + suma2);
+
+let suma3 = fnc2(11 , 22);
+console.log("Let suma3 = " + suma3);
+
+//definimos una constante y le asignamos el valor de una función flecha
+const sumar = (a, b) => a + b;
+
+//llamamos a la constante y le agregamos los parámetros dentro de los paréntesis
+console.log("Función Flecha => : " + sumar(11, 22));
+
+function arra() {
+
+  //declaramos array con 5 frutas. Comienza el indice en el elemento 0 = Manzana
+  const frutas = ['Manzana', 'Pera', 'Frutilla', 'Kiwi', 'Sandía'];
+
+  console.log("Fruta con indice 2 : " + frutas[2]);
+  console.log("funcion at(4) sandía? = " + frutas.at(4))
+
+  console.log("Length de frutas: " + frutas.length);
+
+  frutas.push('Ananá');
+  console.log("Length de frutas: " + frutas.length);
+  console.log(frutas.at(5));
+
+  frutas.unshift('Melón');
+  console.log("Length de frutas: " + frutas.length);
+  console.log(frutas.at(0));
+
+  //Tarea utilizar el método pop() y shift()  para eliminar elementos
+
+}
+
+
+function conc() {
+  const precioRemeras = [200 , 300, 100];
+  const precioMedias = [100, 175, 600];
+
+  console.log(precioMedias);
+
+  const precio = precioRemeras.concat(precioMedias);
+
+  console.log(precio);
+
+  console.log(precio.join('-'));
+
+}
+
+function spl() {
+  const nombres = "Estela, Mija, Elena, Braulio, Víctor";
+
+  let nombresArray = nombres.split(',');
+
+  console.log(nombresArray.length);
+  console.log(nombresArray.at(0));
+}
+
+function slc() {
+  const animales = ["Pato", "Perro", "Gato", "Loro", "Puma"];
+
+  console.log(animales.slice(2, 4));
+
+}
+
+function sor() {
+  const animales = ["Pato", "Perro", "Gato", "Loro", "Puma"];
+
+  console.log(animales.sort());
+
+  const numeros = [10, 100, 33, 28, 1000];
+  console.log(numeros.sort((a,b) => a - b));
+
+}
