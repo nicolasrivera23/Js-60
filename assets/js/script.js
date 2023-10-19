@@ -334,5 +334,57 @@ function sor() {
 
   const numeros = [10, 100, 33, 28, 1000];
   console.log(numeros.sort((a,b) => a - b));
+}
+
+function foreac() {
+  let arreglo = [1, 2, 3, 4, 5, 6];
+
+  arreglo.forEach( item => {
+    console.log(item);
+  }
+  )
+}
+
+function domtest() {
+  const nodo = document.getElementById('domid');
+  console.log(nodo);
+}
+
+function domcreate() {
+
+  //creo un elemento del tipo H2
+  let elemento = document.createElement('h2');
+
+  //creo un nodo del tipo texto
+  let texto = document.createTextNode("Texto insertado desde JS");
+
+  console.log(elemento);
+  console.log(texto);
+
+  //agrego el texto creado anteriormente como nodo hijo de H2 con el id 'domcre'
+  document.getElementById('domcre').appendChild(texto);
+
+
+}
+
+function dominnertext() {
+  document.getElementById('htres').innerText = 'Título modificado por innerText';
+}
+
+function dominnerhtml() {
+  let etiqueta = '<h4>Titulo h4</h4>';
+  document.getElementById('divcuatro').innerHTML = etiqueta;
+}
+
+function docwrite() {
+  document.write('<h4>Titulo h4</h4>');
+}
+
+function extraer() {
+  let email = document.getElementById('exampleInputEmail1').value;
+  console.log(email);
+
+  let cadena = 'Bienvenida usuari@ ' + email;
+  console.log(cadena);
 
 }
