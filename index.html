@@ -5,121 +5,236 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Javascript2</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
+
+  <!-- Inicio Navbar -->
+
+  <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #157347;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Javascript</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#operadores">Operadores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cond">Condicionales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ciclos">Ciclos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#funciones">Funciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#arr">Arrays</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div style="height: 56px;"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-success" id="headerNav">
+    <div class="container-fluid">
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#">Products</a>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link mx-2" href="#">
+              <img src="./assets/img/brand-javascript.svg" alt="logo javascript" style="height: 80px;"/>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Company
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+              <li><a class="dropdown-item" href="#">About Us</a></li>
+              <li><a class="dropdown-item" href="#">Contact us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Fin Navbar -->
+
+  <div style="height: 56px;"></div>
   
-  <h1>Javascript</h1>
-  <button onclick="preguntarNombre()">Click</button>
-  <button onclick="noHaceNada()">Variable</button>
-  <button onclick="tipoDatos()">Persona</button>
+  <section class="border border-success m-5 p-2 text-center">
+    <h1 class="mb-4">Javascript</h1>
+    <p class="h5 px-5">
+      En este sitio vamos a ver algunos ejemplos en Javascript mostrando los datos de salida por consola.
+    </p>
+  </section>
 
-  <section class="border border-primary m-2 p-2 text-center">
+  <section class="bg-primary-subtle border border-primary rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Preguntar Nombre con alert y prompt</h2>
+    <button class="btn btn-primary" onclick="preguntarNombre()">Preguntar</button>
+  </section>
 
-    <h2>Métodos de String (Cadena de texto)</h2>
+  <section class="bg-primary-subtle border border-primary rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Tipos de datos</h2>
+    <button class="btn btn-primary" onclick="noHaceNada()">Tipos de datos</button>
+    <button class="btn btn-primary" onclick="tipoDatos()">Objeto</button>
+  </section>
+
+  <section class="bg-primary-subtle border border-primary rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Métodos de String (Cadena de texto)</h2>
     <p id="struno">Lorem ipsum blablabla</p>
-    <button onclick="may()">Mayusculas</button>
-    <button onclick="contar()">Contar</button>
-    <button onclick="repetir()">Repetir</button>
-    <button onclick="reemplazar()">Reemplazar</button>
+    <button class="btn btn-primary" onclick="may()">Mayusculas</button>
+    <button class="btn btn-primary" onclick="contar()">Contar</button>
+    <button class="btn btn-primary" onclick="repetir()">Repetir</button>
+    <button class="btn btn-primary" onclick="reemplazar()">Reemplazar</button>
   </section>
 
-  <section class="border border-primary m-2 p-2 text-center">
-
-    <h2>Parsers / Cambiar de un tipo de dato a otro</h2>
+  <section class="bg-primary-subtle border border-primary m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Parsers / Cambiar de un tipo de dato a otro</h2>
     <p id="struno">Lorem ipsum blablabla</p>
-    <button onclick="parint()">ParseInt</button>
-    <button onclick="parFloat()">ParseFloat</button>
-    <button onclick="numb()">Number</button>
+    <button class="btn btn-primary" onclick="parint()">ParseInt</button>
+    <button class="btn btn-primary" onclick="parFloat()">ParseFloat</button>
+    <button class="btn btn-primary" onclick="numb()">Number</button>
   </section>
 
-  <section class="border border-danger m-2 p-2 text-center">
-
-    <h2>Operadores Aritméticos</h2>
-    <button onclick="oper()">Operadores</button>
+  <section id="operadores" class="bg-success-subtle border border-success m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Operadores Aritméticos</h2>
+    <button class="btn btn-outline-success" onclick="oper()">Operadores</button>
   </section>
 
-  <section class="border border-danger m-2 p-2 text-center">
-    <h2>Operadores Aritméticos más asignación</h2>
-    <button onclick="opesig()">Operadores más asignación</button>
+  <section class="bg-success-subtle border border-success rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Operadores Aritméticos más asignación</h2>
+    <button class="btn btn-outline-success" onclick="opesig()">Operadores más asignación</button>
   </section>
 
-  <section class="border border-danger m-2 p-2 text-center">
-    <h2>Comparación</h2>
-    <button onclick="compar()">Comparar</button>
+  <section class="bg-success-subtle border border-success m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Comparación</h2>
+    <button class="btn btn-outline-success" onclick="compar()">Comparar</button>
   </section>
   
-  <section class="border border-danger m-2 p-2 text-center">
-    <h2>Operadores de Incremento y Decremento</h2>
-    <button onclick="incdec()">Inc - Dec</button>
+  <section class="bg-success-subtle border border-success rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Operadores de Incremento y Decremento</h2>
+    <button class="btn btn-outline-success" onclick="incdec()">Inc - Dec</button>
   </section>
 
-  <section class="border border-danger m-2 p-2 text-center">
-    <h2>Operadores Lógicos</h2>
-    <button onclick="logic()">Lógicos</button>
+  <section class="bg-success-subtle border border-success m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 id="cond" class="mb-4">Operadores Lógicos</h2>
+    <button class="btn btn-outline-success" onclick="logic()">Lógicos</button>
   </section>
 
-  <section class="border border-success rounded-5 m-2 p-2 text-center">
-    <h2>Condicionales</h2>
-    <button onclick="cond()">Condicionales</button>
-    <button onclick="cond2()">else if</button>
+  <section class="border border-warning rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Condicionales</h2>
+    <button class="btn btn-outline-warning" onclick="cond()">if</button>
+    <button class="btn btn-outline-warning" onclick="cond2()">else if</button>
   </section>
 
-  <section class="border border-danger rounded-5 m-2 p-2 text-center">
-    <h2>Operador Ternario</h2>
-    <button onclick="tern()">Ternario</button>
+  <section class="border border-warning m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Operador Ternario</h2>
+    <button class="btn btn-outline-warning" onclick="tern()">Ternario</button>
   </section>
 
-  <section class="border border-primary rounded-5 m-2 p-2 text-center">
-    <h2>Switch</h2>
-    <button onclick="switc()">Switch</button>
+  <section class="border border-warning rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 id="ciclos" class="mb-4">Switch</h2>
+    <button class="btn btn-outline-warning" onclick="switc()">Switch</button>
   </section>
 
-  <section class="border border-primary rounded-5 m-2 p-2 text-center">
-    <h2>Bucle For</h2>
-    <button onclick="fo()">For</button>
+  <section class="bg-primary-subtle border border-primary rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Bucle For</h2>
+    <button class="btn btn-primary" onclick="fo()">For</button>
   </section>
 
-  <section class="border border-primary rounded-5 m-2 p-2 text-center">
-    <h2>While</h2>
-    <button onclick="wh()">While</button>
+  <section class="bg-primary-subtle border border-primary m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">While</h2>
+    <button class="btn btn-primary" onclick="wh()">While</button>
   </section>
 
-  <section class="border border-primary rounded-5 m-2 p-2 text-center">
-    <h2>Do-While</h2>
-    <button onclick="dwh()">Do-While</button>
+  <section class="bg-primary-subtle border border-primary rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 id="funciones" class="mb-4">Do-While</h2>
+    <button class="btn btn-primary" onclick="dwh()">Do-While</button>
   </section>
 
-  <section class="border border-success rounded-5 m-2 p-2 text-center">
-    <h2>Functions</h2>
-    <button onclick="fnc()">Function Sumar</button>
+  <section class="bg-warning-subtle border border-warning m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Functions</h2>
+    <button class="btn btn-outline-warning" onclick="fnc()">Function Sumar</button>
   </section>
 
-  <section class="border border-danger rounded-5 m-2 p-2 text-center">
-    <h2>Arrow Function / Función Flecha</h2>
-    <button onclick="arrowF()">Function Flecha</button>
+  <section class="bg-warning-subtle border border-warning m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 id="arr" class="mb-4">Arrow Function / Función Flecha</h2>
+    <button class="btn btn-outline-warning" onclick="arrowF()">Function Flecha</button>
   </section>
 
-  <section class="border border-danger rounded-5 m-2 p-2 text-center">
-    <h2>Arrays / Arreglos</h2>
-    <button onclick="arra()">Array</button>
+  <section class="bg-success-subtle border border-success rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Arrays / Arreglos</h2>
+    <button class="btn btn-success" onclick="arra()">Array</button>
   </section>
 
-  <section class="border border-danger rounded-5 m-2 p-2 text-center">
-    <h2>Concatenar / Join</h2>
-    <button onclick="conc()">Concatenar</button>
+  <section class="bg-success-subtle border border-success m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Concatenar / Join</h2>
+    <button class="btn btn-success" onclick="conc()">Concatenar</button>
   </section>
 
-  <section class="border border-danger rounded-5 m-2 p-2 text-center">
-    <h2>Split</h2>
-    <button onclick="spl()">Split</button>
+  <section class="bg-success-subtle border border-success rounded-5 m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Split</h2>
+    <button class="btn btn-success" onclick="spl()">Split</button>
   </section>
 
-  <section class="border border-danger rounded-5 m-2 p-2 text-center">
-    <h2>Slice / Sort</h2>
-    <button onclick="slc()">Slice</button>
-    <button onclick="sor()">Sort</button>
+  <section class="bg-success-subtle border border-success m-4 pt-2 pb-3 col-10 mx-auto text-center">
+    <h2 class="mb-4">Slice / Sort</h2>
+    <button class="btn btn-success" onclick="slc()">Slice</button>
+    <button class="btn btn-success" onclick="sor()">Sort</button>
   </section>
 
+  <footer class="border border-success" style="background-color: chocolate;">
+    <div class="row d-flex text-center fondo-footer text-light py-2 px-4 gap-2">
+      <div class="col align-self-center mx-auto btn btn-success">
+        Operadores
+      </div>
+      <div class="col align-self-center mx-auto btn btn-success">
+        Condicionales
+      </div>
+      <div class="col align-self-center mx-auto btn btn-success">
+        Ciclos
+      </div>
+      <div class="col align-self-center mx-auto btn btn-success">
+        Funciones
+      </div>
+      <div class="col align-self-center mx-auto btn btn-success">
+        Arrays
+      </div>
+    </div>
+  </footer>
 
   <script src="assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

@@ -15,7 +15,7 @@ function noHaceNada() {
   var hola = 'Bienvenido a Js';
   let numero = 10000;
   const PI = 3.1416;
-  alert(nombre2);
+  alert(hola);
   alert(PI);
   PI = 3.11;
   alert(PI);
@@ -149,7 +149,7 @@ function logic() {
 }
 
 function cond() {
-  if(5 > 6) {
+  if(5 < 6) {
     alert('Verdadero entro al bloque if');
   } else {
     alert('La condición no se cumplió');
@@ -261,11 +261,12 @@ function fnc2(a, b) {
   return resultado;
 }
 
-let suma2 = fnc2(11 , 12);
-console.log("Let suma2 = " + suma2);
-
-let suma3 = fnc2(11 , 22);
-console.log("Let suma3 = " + suma3);
+function arrowF() {
+  let suma2 = fnc2(11 , 12);
+  console.log("Let suma2 = " + suma2);
+  let suma3 = fnc2(11 , 22);
+  console.log("Let suma3 = " + suma3);
+}
 
 //definimos una constante y le asignamos el valor de una función flecha
 const sumar = (a, b) => a + b;
