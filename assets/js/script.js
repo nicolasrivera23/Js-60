@@ -1,3 +1,30 @@
+function msjKeyPress() {
+  alert("Se presionó una tecla");
+}
+
+function mensaje() {
+  console.log('Click desde event listener');
+}
+
+function encimaCursor() {
+  console.log("Encima del elemento " + x.tagName);
+}
+
+function fueraCursor() {
+  console.log("Fuera del elemento " + x.tagName);
+  
+}
+
+var x = document.getElementById('evhand');
+x.addEventListener("click", mensaje);
+x.addEventListener("mouseover", encimaCursor);
+x.addEventListener("mouseout" , fueraCursor);
+
+
+document.addEventListener(
+  "keypress", msjKeyPress
+);
+
 
 function preguntarNombre() {
 
@@ -383,8 +410,10 @@ function docwrite() {
 function extraer() {
   let email = document.getElementById('exampleInputEmail1').value;
   console.log(email);
-
   let cadena = 'Bienvenida usuari@ ' + email;
-  console.log(cadena);
+  
+  document.getElementById('parBienvenida').innerHTML = cadena;
+
+
 
 }
