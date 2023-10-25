@@ -20,11 +20,11 @@ x.addEventListener("click", mensaje);
 x.addEventListener("mouseover", encimaCursor);
 x.addEventListener("mouseout" , fueraCursor);
 
-
+/*
 document.addEventListener(
   "keypress", msjKeyPress
 );
-
+*/
 
 function preguntarNombre() {
 
@@ -413,7 +413,21 @@ function extraer() {
   let cadena = 'Bienvenida usuari@ ' + email;
   
   document.getElementById('parBienvenida').innerHTML = cadena;
+}
 
+function calcular() {
+  let n1 = document.getElementById('nro1').value;
+  let n2 = document.getElementById('nro2').value;
 
+  console.log(typeof(n1));
+  console.log(n2);
+
+  let resultado = parseInt(n1) + parseInt(n2);
+
+  console.log(resultado);
+
+  let x = document.getElementById('resultado');
+  x.innerHTML = resultado;
+  x.style.color = 'yellow';
 
 }
